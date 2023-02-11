@@ -1,0 +1,267 @@
+<div id="carouselExampleCaptions" class="carousel slide">
+  <div class="carousel-indicators">
+    <button
+      type="button"
+      data-bs-target="#carouselExampleCaptions"
+      data-bs-slide-to="0"
+      class="active"
+      aria-current="true"
+      aria-label="Slide 1"
+    ></button>
+    <button
+      type="button"
+      data-bs-target="#carouselExampleCaptions"
+      data-bs-slide-to="1"
+      aria-label="Slide 2"
+    ></button>
+    <button
+      type="button"
+      data-bs-target="#carouselExampleCaptions"
+      data-bs-slide-to="2"
+      aria-label="Slide 3"
+    ></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img
+        src="https://images.pexels.com/photos/277319/pexels-photo-277319.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        class="d-block w-100"
+        alt="..."
+      />
+      <div class="carousel-caption d-none d-md-block">
+        <h5 class="text-light">Latest Original Watches</h5>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto,
+          ea.
+        </p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img
+        src="https://images.pexels.com/photos/1124466/pexels-photo-1124466.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        class="d-block w-100"
+        alt="..."
+      />
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Latest shoes</h5>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
+          impedit cumque molestias?
+        </p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img
+        src="https://images.pexels.com/photos/933245/pexels-photo-933245.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        class="d-block w-100"
+        alt="..."
+      />
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Latest electronics</h5>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. A, pariatur
+          quisquam!
+        </p>
+      </div>
+    </div>
+  </div>
+  <button
+    class="carousel-control-prev"
+    type="button"
+    data-bs-target="#carouselExampleCaptions"
+    data-bs-slide="prev"
+  >
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button
+    class="carousel-control-next"
+    type="button"
+    data-bs-target="#carouselExampleCaptions"
+    data-bs-slide="next"
+  >
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+<section class="introduction">
+  <div class="container">
+    <section class="row">
+      <div class="row">
+        <h2 class="fs-1 pb-4">We Have What You Need</h2>
+      </div>
+      <div class="row pb-4"><span></span></div>
+      <div class="row pt-3 pb-3">
+        <p class="col-6 fs-4">
+          To Have Access to All Of Our Products You need to Login 
+        </p>
+      </div>
+      <div class="row">
+        <div class="col"><button class="btn buttuns fs-5"
+          routerLink="users/login"
+          routerLinkActive="fw-bold text-primary"
+          [routerLinkActiveOptions]="{ exact: true }"
+          >Login</button></div>
+      </div>
+      <div class="row pt-3 pb-3">
+        <p class="col-6 fs-4">
+          If You don't have Email You can register here
+        </p>
+      </div>
+      <div class="row">
+        <div class="col"><button class="btn buttuns fs-5"
+          routerLink="users/register"
+          routerLinkActive="fw-bold text-primary"
+          [routerLinkActiveOptions]="{ exact: true }"
+          >Register</button></div>
+      </div>
+    </section>
+  </div>
+</section>
+<section class="reviews bg-light">
+  <div class="container">
+    <h2 class="text-center pb-4 fs-2">All What You Need To Know About Us</h2>
+    <div class="row">
+      <div class="col-md-4 col-12 alert alert-link">
+        <p class="text-start fs-4 ">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis
+          molestiae doloribus accusamus Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, fuga.
+        </p>
+      </div>
+      <div class="col-md-4 col-12 alert alert-link">
+        <p class="text-start fs-4">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+          Voluptatibus, laudantium. Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, nisi!
+        </p>
+      </div>
+      <div class="col-md-4 col-12 alert alert-link">
+        <p class="text-start fs-4">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic
+          recusandae amet minima incidunt. Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, libero.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="question">
+  <div class="container">
+    <div class="styleH2">
+      <h2 class="text-center">Frequently asked questions</h2>
+    </div>
+
+    <div
+      class="accordion accordion-flush border border-light-subtle bg-black"
+      id="accordionFlushExample"
+    >
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingOne">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseOne"
+            aria-expanded="false"
+            aria-controls="flush-collapseOne"
+          >
+            Lorem ipsum dolor sit amet consectetur adipisicin ?
+          </button>
+        </h2>
+        <div
+          id="flush-collapseOne"
+          class="accordion-collapse collapse"
+          aria-labelledby="flush-headingOne"
+          data-bs-parent="#accordionFlushExample"
+        >
+          <div class="accordion-body">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta hic
+            dolore sapiente praesentium distinctio nostrum cumque soluta culpa
+            ab sed.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingTwo">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseTwo"
+            aria-expanded="false"
+            aria-controls="flush-collapseTwo"
+          >
+            Lorem ipsum dolor sit amet consectetur adipisicin ?
+          </button>
+        </h2>
+        <div
+          id="flush-collapseTwo"
+          class="accordion-collapse collapse"
+          aria-labelledby="flush-headingTwo"
+          data-bs-parent="#accordionFlushExample"
+        >
+          <div class="accordion-body">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta hic
+            dolore sapiente praesentium distinctio nostrum cumque soluta culpa
+            ab sed.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingThree">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseThree"
+            aria-expanded="false"
+            aria-controls="flush-collapseThree"
+          >
+            Lorem ipsum dolor sit amet consectetur adipisicin ?
+          </button>
+        </h2>
+        <div
+          id="flush-collapseThree"
+          class="accordion-collapse collapse"
+          aria-labelledby="flush-headingThree"
+          data-bs-parent="#accordionFlushExample"
+        >
+          <div class="accordion-body">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta hic
+            dolore sapiente praesentium distinctio nostrum cumque soluta culpa
+            ab sed.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="reviews bg-light">
+  <div class="container">
+    <h2 class="text-center pb-4">What people are saying…</h2>
+    <div class="row">
+      <div class="col-md-4 col-12 alert alert-link">
+        <h3 class="text-center">Tim Schoch</h3>
+        <p class="text-center">DESIGNER</p>
+        <p class="text-center">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis
+          molestiae doloribus accusamus
+        </p>
+      </div>
+      <div class="col-md-4 col-12 alert alert-link">
+        <h3 class="text-center">Olive Mathews</h3>
+        <p class="text-center">PHOTOGRAPHER</p>
+        <p class="text-center">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+          Voluptatibus, laudantium.
+        </p>
+      </div>
+      <div class="col-md-4 col-12 alert alert-link">
+        <h3 class="text-center">Malan Alankara</h3>
+        <p class="text-center">ARCHITECT</p>
+        <p class="text-center">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic
+          recusandae amet minima incidunt.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

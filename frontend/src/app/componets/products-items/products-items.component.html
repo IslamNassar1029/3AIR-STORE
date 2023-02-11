@@ -1,0 +1,32 @@
+<div class="card products">
+    <img src="{{ productItem.imgScr }}" class="card-img-top d-flex flex-column justify-content-center" alt="..." [routerLink]="['/productsDetails',productItem._id]" />
+      <div class="card-body d-flex flex-column justify-content-between">
+        <h5 class="card-title text-center">{{ productItem.title }}</h5>
+        <div [ngSwitch]="productItem.Quantity">
+          <div *ngSwitchCase="0">
+            <p class="card-text fw-semibold">Price : {{ productItem.price | currency}}</p>
+            <p class="card-text fw-semibold text-danger">No product Available</p>
+          </div>
+          <div *ngSwitchCase="1">
+            <p class="card-text fw-semibold">Price : {{ productItem.price | currency}}</p>
+            <p class="card-text fw-semibold text-primary">Only one product available</p>
+          </div>
+          <div *ngSwitchDefault>
+            <p class="card-text fw-semibold">Price : {{ productItem.price | currency}}</p>
+            <p class="card-text fw-semibold text-success">Quantity :{{ productItem.Quantity }}</p>
+          </div>
+        </div>
+        <p class="card-text">category : {{ productItem.category }}</p>
+        <p class="card-text">brand : {{ productItem.brand }}</p>
+        <p class="card-text">description : Lorem ipsum dolor sit amet.</p>
+    
+        <button class="btn btn-primary d-flex justify-content-center"
+        [ngClass]="{
+          'bg-danger': productItem.Quantity==0,
+          'bg-success': productItem.Quantity!=0
+        }"
+          (click)="addToCart()">{{productItem.Quantity==0?'Sold out':'Add to cart'}}</button
+        >
+      </div>
+    </div>
+

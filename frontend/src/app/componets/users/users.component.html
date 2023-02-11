@@ -1,0 +1,32 @@
+<div class="users mt-4 ">
+    <div class="container "> 
+      <div class="d-flex justify-content-between">
+        <a class="btn btn-outline-dark mb-4 active fs-4" [routerLink]="['/users']" >Users Dashboard</a>
+        <a class="btn btn-outline-dark mb-4 fs-4" [routerLink]="['/productsDashboard']" >Products Dashboard</a>
+      </div>
+     <table class="table bg-light">
+            <thead>
+              <tr >
+                <th scope="col">Id</th>
+                <th scope="col">Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Password</th>
+                <th scope="col">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let user of users">
+                <th scope="row">{{user._id}}</th>
+                <td>{{user.firstName}} {{user.lastName}}</td>
+                <td>{{user.email}}</td>
+                <td>{{user.password}}</td>
+                <td >
+                    <button class="btn btn-outline-danger mx-1 " (click)="deleteUser(user._id)">Delete User</button>
+                    <button class="btn btn-outline-primary mx-1" [routerLink]="['/userDetails',user._id]">Show Details</button>
+                </td>
+              </tr>
+
+            </tbody>
+          </table>
+    </div>
+</div>

@@ -1,0 +1,95 @@
+<section class="m-5">
+  <div class="container rounded p-5" style="background-color: #a0a1a1">
+    <form [formGroup]="loginForm" (ngSubmit)="login($event)">
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Name</label>
+        <div class="row g-2">
+          <div class="col-6">
+          <input
+          type="text"
+          class="form-control "
+          id="exampleInputEmail1"
+          aria-describedby="emailHelp"
+          placeholder="enter FirstName"
+          formControlName="firstName"
+        />
+          </div>
+          <div class="col-6">
+        <input
+        type="text"
+        class="form-control "
+        id="exampleInputEmail2"
+        aria-describedby="emailHelp"
+        placeholder="enter LastName"
+        formControlName="lastName"
+      />            
+          </div>
+
+
+        </div>
+        <div
+          *ngIf="getFirstName.touched || errorinForm"
+          id="nameHelp"
+          class="form-text text-danger"
+        >
+          <p *ngIf="getFirstName.hasError('required')">FirstName is Required</p>
+          <p *ngIf="getFirstName.hasError('pattern')">
+            FirstName must be string and more than 3 char
+          </p>
+        </div>
+        <div
+        *ngIf="getLastName.touched || errorinForm"
+        id="nameHelp"
+        class="form-text text-danger"
+      >
+        <p *ngIf="getLastName.hasError('required')">LastName is Required</p>
+        <p *ngIf="getLastName.hasError('pattern')">
+          LastName must be string and more than 3 char
+        </p>
+      </div>
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Email</label>
+        <input
+          type="email"
+          class="form-control"
+          id="exampleInputPassword3"
+          placeholder="enter your email"
+          formControlName="email"
+        />
+      </div>
+      <div
+        *ngIf="getEmail.touched || errorinForm"
+        id="emailHelp"
+        class="form-text text-danger"
+      >
+        <p *ngIf="getEmail.hasError('required')">Email is Required</p>
+        <p *ngIf="getEmail.hasError('email')">Email isn't valid</p>
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Password</label>
+        <input
+          type="password"
+          class="form-control"
+          id="exampleInputPassword2"
+          placeholder="enter your password"
+          formControlName="password"
+        />
+      </div>
+      <div
+        *ngIf="getPassword.touched || errorinForm"
+        id="passwordHelp"
+        class="form-text text-danger"
+      >
+        <p *ngIf="getPassword.hasError('required')">Password is Required</p>
+        <p *ngIf="getPassword.hasError('minlength')">
+          Password must be more than 8 char
+        </p>
+      </div>
+
+      <button type="submit" class="btn btn-primary mt-3">
+         Register
+      </button>
+    </form>
+  </div>
+</section>

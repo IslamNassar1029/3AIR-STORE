@@ -1,0 +1,23 @@
+<section class="products bg-light">
+  <div class="container">
+    <div class="d-flex justify-content-between pt-5 pb-4">
+      <h1 class="text-center text-dark pb-4">Our Products</h1>
+      <a  class="addTOCart"
+        ><i class="fa-solid fa-cart-plus"
+          >
+          <span *ngIf="counterStart>0" id="addNumberCart" class="buy">{{counterStart}}</span>
+          </i
+        ></a
+      >
+    </div>
+    <div class="row">
+      <app-products-items
+        *ngFor="let product of productsList"
+        [productItem]="product"
+        [counterStart]="counterStart"
+        (myEvent)="getCounter($event)"
+        class="col-sm-6 col-md-4 col-lg-3 mb-4"
+      ></app-products-items>
+    </div>
+  </div>
+</section>

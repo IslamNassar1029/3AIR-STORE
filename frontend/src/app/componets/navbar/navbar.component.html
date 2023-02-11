@@ -1,0 +1,52 @@
+<nav class="coloring">
+  <div class="container">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary ">
+      <div class="container-fluid">
+        <a class="navbar-brand fs-1 fw-semibold" href="#">3AIR STORE</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto fs-4 fw-bold">
+            <li class="nav-item ">
+              <a
+                class="nav-link "
+                aria-current="page"
+                routerLink=""
+                routerLinkActive="fw-bold text-primary"
+                [routerLinkActiveOptions]="{ exact: true }"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                routerLink="users/login"
+                routerLinkActive="fw-bold text-primary"
+                [routerLinkActiveOptions]="{ exact: true }"
+                >Login</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                routerLink="users/register"
+                routerLinkActive="fw-bold text-primary"
+                [routerLinkActiveOptions]="{ exact: true }"
+                >Register</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+</nav>

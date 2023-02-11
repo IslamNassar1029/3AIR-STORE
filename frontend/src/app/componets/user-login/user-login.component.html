@@ -1,0 +1,48 @@
+<section class="mt-4 mb-4">
+    <div class="container rounded p-5" style="background-color: #a0a1a1">
+      <form [formGroup]="loginForm" (ngSubmit)="login($event)">
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Email</label>
+          <input
+            type="email"
+            class="form-control"
+            id="exampleInputPassword3"
+            placeholder="enter your email"
+            formControlName="email"
+          />
+        </div>
+        <div
+          *ngIf="getEmail.touched || errorinForm"
+          id="emailHelp"
+          class="form-text text-danger"
+        >
+          <p *ngIf="getEmail.hasError('required')">Email is Required</p>
+          <p *ngIf="getEmail.hasError('email')">Email isn't valid</p>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Password</label>
+          <input
+            type="password"
+            class="form-control"
+            id="exampleInputPassword2"
+            placeholder="enter your password"
+            formControlName="password"
+          />
+        </div>
+        <div
+          *ngIf="getPassword.touched || errorinForm"
+          id="passwordHelp"
+          class="form-text text-danger"
+        >
+          <p *ngIf="getPassword.hasError('required')">Password is Required</p>
+          <p *ngIf="getPassword.hasError('minlength')">
+            Password must be more than 8 char
+          </p>
+        </div>
+  
+        <button type="submit" class="btn btn-primary mt-3">
+          Login
+        </button>
+      </form>
+    </div>
+  </section>

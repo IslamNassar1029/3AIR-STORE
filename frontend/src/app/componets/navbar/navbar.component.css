@@ -1,0 +1,13 @@
+.coloring {
+    background: linear-gradient(165deg,#000000 5%,#002764 50%,#02FCE1 87%);
+    /* width: 100%;
+    position: fixed;
+    z-index: 10; */
+}
+a{
+    color: rgb(189, 181, 181) ;
+    transition: .5s;
+}
+a:hover{
+    color: #0D6EFD ;
+}
